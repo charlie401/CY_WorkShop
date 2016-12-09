@@ -18,14 +18,16 @@ import Foundation
  因此串行化的operation queue并不等同于GCD中的串行dispatch queue
  */
 func testOpearationAsyncFunc(){
-    
+
     let queue = NSOperationQueue()
     
     queue.maxConcurrentOperationCount = 1
     for j in 0...5 {
         
+//        let lock = NSConditionLock(condition: 0)
+//        lock.
         let opearation = NSBlockOperation()
-        
+//        opearation.start()
         for i in 6...9{
             
             opearation.addExecutionBlock({
@@ -33,18 +35,13 @@ func testOpearationAsyncFunc(){
                 NSLog("第%ld个opearation 第%ld次 - %@", j, i,  NSThread.currentThread())
                 
             })
-            
+//            opearation.asynchronous
+//            opearation.
         }
         queue.addOperation(opearation)
     }
-//    opearation.start()
     
-//    queue.addOperation(opearation)
-    
-//    NSThread.sleepForTimeInterval(1)
-//    queue.addOperation(opearation)
     queue.waitUntilAllOperationsAreFinished()
-//    NSThread.mainThread().
 }
 
 testOpearationAsyncFunc()
