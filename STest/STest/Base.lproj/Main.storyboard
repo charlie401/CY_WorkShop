@@ -1,26 +1,95 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="STest" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceHorizontal="YES" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="5tK-7G-QGe">
+                                <rect key="frame" x="0.0" y="-0.33333333333334281" width="736" height="414"/>
+                                <color key="backgroundColor" red="1" green="0.44798964452105872" blue="0.25348013119096546" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="v1h-bV-0QY">
+                                    <size key="itemSize" width="204" height="147"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eMF-7x-wql">
+                                <rect key="frame" x="0.0" y="5" width="736" height="414"/>
+                                <color key="backgroundColor" red="0.40000000600000002" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="5tK-7G-QGe" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.47" id="3K0-C1-itZ"/>
+                            <constraint firstItem="eMF-7x-wql" firstAttribute="leading" secondItem="5tK-7G-QGe" secondAttribute="leading" id="8qh-3Z-fpz"/>
+                            <constraint firstItem="eMF-7x-wql" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="5" id="AF9-th-CSB"/>
+                            <constraint firstItem="eMF-7x-wql" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="5" id="J64-hf-bKx">
+                                <variation key="heightClass=regular" constant="5"/>
+                            </constraint>
+                            <constraint firstItem="eMF-7x-wql" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="NyJ-5o-oGP"/>
+                            <constraint firstItem="5tK-7G-QGe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="PWE-yM-LcW"/>
+                            <constraint firstAttribute="trailing" secondItem="5tK-7G-QGe" secondAttribute="trailing" id="PzI-rI-4lz"/>
+                            <constraint firstAttribute="bottom" secondItem="5tK-7G-QGe" secondAttribute="bottom" id="go6-CJ-FP5"/>
+                            <constraint firstItem="eMF-7x-wql" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.52" id="pT7-oQ-FEH"/>
+                            <constraint firstItem="5tK-7G-QGe" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="q2Q-Vd-2JD"/>
+                            <constraint firstAttribute="trailing" secondItem="eMF-7x-wql" secondAttribute="trailing" constant="5" id="t17-jF-KPj">
+                                <variation key="heightClass=regular" constant="5"/>
+                            </constraint>
+                            <constraint firstItem="eMF-7x-wql" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="uaJ-nz-uRq"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="8qh-3Z-fpz"/>
+                                <exclude reference="J64-hf-bKx"/>
+                                <exclude reference="NyJ-5o-oGP"/>
+                                <exclude reference="pT7-oQ-FEH"/>
+                                <exclude reference="t17-jF-KPj"/>
+                                <exclude reference="uaJ-nz-uRq"/>
+                                <exclude reference="3K0-C1-itZ"/>
+                                <exclude reference="q2Q-Vd-2JD"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="constraints">
+                                <include reference="8qh-3Z-fpz"/>
+                                <include reference="NyJ-5o-oGP"/>
+                                <include reference="uaJ-nz-uRq"/>
+                                <include reference="q2Q-Vd-2JD"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular">
+                            <mask key="constraints">
+                                <include reference="J64-hf-bKx"/>
+                                <include reference="pT7-oQ-FEH"/>
+                                <include reference="t17-jF-KPj"/>
+                                <include reference="3K0-C1-itZ"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="33.333333333333336" y="39.130434782608695"/>
         </scene>
     </scenes>
 </document>
